@@ -71,6 +71,9 @@ hr {
   width: 230px;
   float: left;
   }
+#leftSide img {
+  margin-bottom: 50px;
+}
 
 #rightSide {
   width: 420px;
