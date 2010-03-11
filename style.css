@@ -8,6 +8,7 @@ body {
   padding: 0px;
   background-color: #FFFFFF;
   color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
 hr {
@@ -37,7 +38,6 @@ hr {
 
 #headerLinks {
   color: #FFFFFF;
-  font-family: arial;
   font-size: 8pt;
   padding-top: 60px;
   padding-right: 5px;
@@ -45,28 +45,24 @@ hr {
 
 .hlink:link {
   color: #FFFFFF;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
 
 .hlink:active {
   color: #FFFFFF;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
 
 .hlink:hover {
   color: #FFFFFF;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: underline;
   }
 
 .hlink:visited {
   color: #FFFFFF;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
@@ -90,7 +86,6 @@ hr {
   vertical-align: middle;
   line-height: 48px;
   color: #FFFFFF;
-  font-family: arial;
   font-size: 18pt;
   float: left;
   margin-right: 8px;
@@ -98,14 +93,12 @@ hr {
 
 h1 {
   color: #333333;
-  font-family: arial;
-  font-size: 10pt;
+  font-size: 16pt;
   }
 
 h2 {
   color: #333333;
-  font-family: arial;
-  font-size: 7pt;
+  font-size: 12pt;
   margin-left: 5px;
   }
 
@@ -118,25 +111,25 @@ h2 {
 
 p {
   text-indent: 20px;
-  font-family: arial;
-  font-size: 8pt;
+  font-size: 12pt;
   margin-bottom: 20px;
   }
 
 #footer {
   clear: both;
   width: 740px;
-  font-family: arial;
   font-size: 8pt;
   border-top: 2px #000000 solid;
   }
+#footer p {
+  font-size: 8pt;
+}
 
 #title {
   float: left;
   color: #FFFFFF;
   padding-left: 100px;
   margin-top: 10px;
-  font-family: arial;
   font-size: 24pt;
   }
 
@@ -145,8 +138,7 @@ p {
   clear: left;
   color: #FFFFFF;
   padding-left: 102px;
-  font-family: arial;
-  font-size: 8pt;
+  font-size: 12pt;
   }
 
 .right {
@@ -161,28 +153,24 @@ p {
 
 .flink:link {
   color: #333333;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
 
 .flink:active {
   color: #333333;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
 
 .flink:hover {
   color: #333333;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: underline;
   }
 
 .flink:visited {
   color: #333333;
-  font-family: arial;
   font-size: 8pt;
   text-decoration: none;
   }
