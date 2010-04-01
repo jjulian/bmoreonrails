@@ -11,23 +11,25 @@
  *
  * Author URL:
  *   http://me.boo.uz
+ *   4/1/2010 hacked up a bit by jjulian
  *
  */
 (function($){
   $.extend({
     jGFeed : function(url, fnk, num, key){
       // Make sure url to get is defined
-      if(url == null) return false;
+      if(!url) {return false;}
       // Build Google Feed API URL
       var gurl = "http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&callback=?&q="+encodeURIComponent(url);
-      if(num != null) gurl += "&num="+num;
-      if(key != null) gurl += "&key="+key;
-      // AJAX request the API
+      if(num) {gurl += "&num="+num;}
+      if(key) {gurl += "&key="+key;}
+      // AJAX request the feed thru the API
       $.getJSON(gurl, function(data){
-        if(typeof fnk == 'function')
-		  fnk.call(this, data.responseData.feed);
-		else
-		  return false;
+        if(typeof fnk === 'function' && data.responseData) {
+          fnk.call(this, data.responseData.feed);
+        } else {
+          fnk.call(this, false, data.responseDetails);
+        }
       });
     }
   });
