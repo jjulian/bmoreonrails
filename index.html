@@ -5,7 +5,7 @@
   <title>B'more on Rails</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="javascripts/jquery-1.4.2.js"></script>
-  <script src="javascripts/jquery.jfeed.js"></script>
+  <script src="javascripts/jquery.jgfeed.js"></script>
 </head>
 <body>
   <div id="pageContainer">
@@ -51,18 +51,20 @@
   </div>
   <script>
   $(document).ready(function() {
-    jQuery.getFeed({
-      url: 'http://www.meetup.com/bmore-on-rails/calendar/rss/B%27more+on+Rails/',
-      success: function(feed) {
-        $.each(feed.items, function(index,item) {
-          $('#upcoming_meetups').append('<h2><a href="'+item.id+'">'+item.title+'</a></h2>').append(item.description);
+    $.jGFeed("http://www.meetup.com/bmore-on-rails/calendar/rss/B'more+on+Rails/",
+      function(feeds){
+        if(!feeds){
+          $('#upcoming_meetups').append('<h2>Feed could not be loaded.<\/h2>');
+          return false;
+        }
+        $.each(feeds.entries, function(index,item) {
+          $('#upcoming_meetups').append('<h2><a href="'+item.link+'">'+item.title+'<\/a><\/h2>').append(item.content);
         });
         //clean up the ugly html that meetup sends us in the description
         $('#upcoming_meetups p').has('img').remove();
         $('#upcoming_meetups p:contains(" - USA")').remove();
         $('#upcoming_meetups p:contains("Details: http://www.meetup.com/bmore-on-rails/calendar")').remove();
-      }
-    });
+      }, 10);
   });
   </script>
 </body>
