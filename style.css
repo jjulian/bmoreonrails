@@ -29,42 +29,11 @@ hr {
 #header {
   width: 740px;
   height: 80px;
-  background: url(images/logo.gif) #bb1f1f no-repeat center left;
+  background-color: #bb1f1f;
   margin-top: 10px;
   border-bottom: #d2d2d2 solid 5px;
   text-align: right;
   margin-bottom: 20px;
-  }
-
-#headerLinks {
-  color: #FFFFFF;
-  font-size: 8pt;
-  padding-top: 60px;
-  padding-right: 5px;
-  }
-
-.hlink:link {
-  color: #FFFFFF;
-  font-size: 8pt;
-  text-decoration: none;
-  }
-
-.hlink:active {
-  color: #FFFFFF;
-  font-size: 8pt;
-  text-decoration: none;
-  }
-
-.hlink:hover {
-  color: #FFFFFF;
-  font-size: 8pt;
-  text-decoration: underline;
-  }
-
-.hlink:visited {
-  color: #FFFFFF;
-  font-size: 8pt;
-  text-decoration: none;
   }
 
 #leftSide {
@@ -99,19 +68,15 @@ h1 {
 h2 {
   color: #333333;
   font-size: 12pt;
-  margin-left: 5px;
   }
 
 .showcase {
-  margin: 2px;
-  padding: 2px;
   margin-top: 10px;
   border: 0px #000000 solid;
   margin-bottom: 40px;
   }
 
 p {
-  text-indent: 20px;
   font-size: 12pt;
   margin-bottom: 20px;
   }
@@ -124,9 +89,10 @@ p {
   }
 #footer p {
   font-size: 8pt;
+  margin:10px;
 }
 
-#title {
+#header #title {
   float: left;
   color: #FFFFFF;
   padding-left: 100px;
@@ -134,46 +100,12 @@ p {
   font-size: 24pt;
   }
 
-#subTitle {
+#header #subTitle {
   float: left;
   clear: left;
   color: #FFFFFF;
-  padding-left: 102px;
+  padding-left: 100px;
   font-size: 12pt;
-  }
-
-.right {
-  float: right;
-  margin: 0px;
-  }
-
-.left {
-  float: left;
-  margin: 0px;
-  }
-
-.flink:link {
-  color: #333333;
-  font-size: 8pt;
-  text-decoration: none;
-  }
-
-.flink:active {
-  color: #333333;
-  font-size: 8pt;
-  text-decoration: none;
-  }
-
-.flink:hover {
-  color: #333333;
-  font-size: 8pt;
-  text-decoration: underline;
-  }
-
-.flink:visited {
-  color: #333333;
-  font-size: 8pt;
-  text-decoration: none;
   }
 
 #upcoming_meetups h2 {
