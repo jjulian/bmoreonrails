@@ -70,6 +70,9 @@ h2 {
   font-size: 12pt;
   }
 
+img {
+  border:0;
+}
 .showcase {
   margin-top: 10px;
   border: 0px #000000 solid;
