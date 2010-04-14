@@ -120,3 +120,8 @@ p {
   padding:5px 0 0 5px;
   margin:0 0 5px 0;
 }
+#bmoreonrails_tweets ul.tweet_list li {
+  list-style-type:none;
+  padding-top:15px;
+  font-size:12px;
+}
