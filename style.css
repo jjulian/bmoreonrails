@@ -125,3 +125,7 @@ p {
   padding-top:15px;
   font-size:12px;
 }
+
+ul.locations {
+  list-style-type:none;
+}
