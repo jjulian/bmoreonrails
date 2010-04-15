@@ -71,3 +71,8 @@ h2.headline {
   font-size:13px;
   font-weight: normal;
 }
+
+ul.locations {
+  list-style-type:none;
+  margin:15px;
+}
