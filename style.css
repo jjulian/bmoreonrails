@@ -77,3 +77,39 @@ ul.locations {
   list-style-type:none;
   margin:10px;
 }
+.banner {
+  text-align:center;
+  background:#c1bd46;
+  padding:1px 0;
+}
+.banner h1 {
+  font-size:1.5em;
+  font-weight:bold;
+  text-shadow: 3px 3px 1px #b1ad36;
+}
+.banner a {
+  color:#333;
+}
+/* */
+#call {
+  text-align:center;
+  background:#c1bd46;
+  padding:20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.event .info {
+  width:80%;
+  float:left;
+}
+.event .logo {
+  float:right;
+  margin-top:20px;
+}
+.event {
+  position:relative;
+  clear:both;
+}
+
+
