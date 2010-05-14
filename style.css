@@ -113,3 +113,8 @@ ul.locations {
 }
 
 
+/* interior page-specific */
+body.interior #pageContainer #homeLink {
+  float: left;
+  margin: 20px 25px auto 0px;
+}
