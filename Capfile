@@ -11,6 +11,8 @@ set :user, "www-data"
 set :use_sudo, false
 set :deploy_to, "/var/www/bmoreonrails"
 
+# custom
+set :stay_with_a_local_root, "/var/www/stay-with-a-local/public"
 
 namespace :deploy do
    task :start do ; end
@@ -20,3 +22,9 @@ namespace :deploy do
    task :migrations do ; end
    task :cold do ; end
 end
+
+task :symlink_stay_with_a_local do
+  run "ln -s #{stay_with_a_local_root} #{release_path}/stay-with-a-local"
+end
+
+after :deploy, :symlink_stay_with_a_local
