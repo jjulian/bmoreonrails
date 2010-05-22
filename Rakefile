@@ -1,7 +1,6 @@
 require 'benchmark'
 require 'haml'
 require 'models/meetup'
-require 'models/member'
 
 desc "Generate the site"
 task :generate do

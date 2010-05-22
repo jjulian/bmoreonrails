@@ -4,7 +4,7 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 set :application, "bmoreonrails"
 set :scm, "git"
 set :repository, "git@github.com:jjulian/bmoreonrails.git"
-set :branch, "gh-pages"
+set :branch, "master"
 
 role :web, "67.207.150.229"
 set :user, "www-data"
@@ -23,8 +23,14 @@ namespace :deploy do
    task :cold do ; end
 end
 
+task :generate do
+  rake = fetch(:rake, "rake")
+  run "cd #{current_release} && #{try_sudo} #{rake} generate"
+end
+
 task :symlink_stay_with_a_local do
   run "ln -s #{stay_with_a_local_root} #{release_path}/stay-with-a-local"
 end
 
+after :deploy, :generate
 after :deploy, :symlink_stay_with_a_local
