@@ -1,0 +1,122 @@
+!!!
+%html{ :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
+    %title
+      B'more on Rails - Baltimore Area Ruby and Rails User Group
+    %link{ :href => "favicon.ico", :rel => "SHORTCUT ICON" }
+    %link{ :href => "images/logo64square.png", :rel => "apple-touch-icon-precomposed" }
+    %meta{ :name => "description", :content => "B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Rails application framework." }
+    %link{ :href => "http://bmoreonrails.org", :rel => "canonical" }
+    %link{ :href => "bmoreonrails.css", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css" }
+  %body
+    .banner
+      %h1
+        RailsConf in Baltimore June 7-10 2010!
+      %p
+        %a{ :href => "railsconf.html" }
+          See what the B'more on Rails team is planning!
+    #pageContainer
+      #rightSide
+        %h1.headline
+          B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails application framework.
+        %h2.headline
+          We meet weekly...
+          %a{ :href => "http://www.meetup.com/bmore-on-rails/" }
+            join us
+          \!
+        %h2
+          Where to find us
+        %ul.locations
+          %li
+            On IRC,
+            %a{ :href => "http://webchat.freenode.net/?channels=bmoreonrails" }
+              \#bmoreonrails on freenode
+            \.
+          %li
+            Email lists, RSVPs, photos, etc on our
+            %a{ :href => "http://www.meetup.com/bmore-on-rails/" }
+              meetup.com page
+            \.
+          %li
+            Meetings at
+            %a{ :href => "http://www.mdlogix.com/" }
+              MDLogix
+            \: 1216 E. Baltimore St. 21202
+          %li
+            Hack nights at
+            %a{ :href => "http://www.beehivebaltimore.org/" }
+              Beehive Baltimore
+            \: 2400 Boston St. #308, 21224
+          %li
+            Pub nights at
+            %a{ :href => "http://maxs.com/" }
+              Max's Taphouse
+            \: 737 S. Broadway, 21231
+        %div
+          %iframe{ :scrolling => "no", :marginheight => "0", :marginwidth => "0", :src => "http://maps.google.com/maps/ms?hl=en&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;msa=0&amp;msid=102224870072496563240.000483a8986e9de0b3bc1&amp;ll=39.285553,-76.59153&amp;spn=0.046507,0.072956&amp;z=14&amp;output=embed", :frameborder => "0", :height => "300", :width => "480" }
+          %br
+          %p
+            View
+            %a{ :href => "http://maps.google.com/maps/ms?hl=en&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;msa=0&amp;msid=102224870072496563240.000483a8986e9de0b3bc1&amp;ll=39.285553,-76.59153&amp;spn=0.046507,0.072956&amp;z=13&amp;source=embed", :style => "color:#0000FF;text-align:left" }
+              this map
+            larger
+        %h2
+          Recent @bmoreonrails Tweets
+        #bmoreonrails_tweets
+        %h2
+          Sponsors
+        %a{ :href => "http://www.mdlogix.com/" }
+          %img{ :src => "images/mdlogix.gif", :alt => "Medical Decision Logic", :width => "40%" }
+        %a{ :href => "http://www.smartlogicsolutions.com/" }
+          %img{ :src => "images/smartlogic.png", :alt => "SmartLogic Solutions", :width => "40%" }
+      #leftSide
+        %h2
+          Upcoming Events
+          %a{ :href => "http://www.meetup.com/bmore-on-rails/calendar/rss/B%27more+on+Rails/" }
+            %img{ :src => "images/feed.png", :alt => "B'more on Rails Upcoming Events Feed" }
+        #upcoming_meetups
+          - upcoming_meetups.each do |meetup|
+            %h3
+              %a{ :href => meetup.link }= meetup.title
+            %h4= meetup.when.strftime("%A, %B %d %Y at %I:%M%p")
+            %p= meetup.content
+      #footer
+        %hr
+        %p
+          \&copy; 2010 B'more On Rails | Website hosted by
+          %a{ :href => "http://www.smartlogicsolutions.com/" }
+            SmartLogic Solutions
+          | Logo by
+          %a{ :href => "http://www.craftwork.net" }
+            Charles Martucci / Craftwork
+    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
+    %script{ :src => "javascripts/jquery.tweet.js" }
+    %script
+      $(document).ready(function() {
+      $("#bmoreonrails_tweets").tweet({
+      username: "bmoreonrails",
+      join_text: "auto",
+      count: 5,
+      auto_join_text_default: "we said,",
+      auto_join_text_ed: "we",
+      auto_join_text_ing: "we were",
+      auto_join_text_reply: "we replied to",
+      auto_join_text_url: "we were checking out",
+      loading_text: "loading tweets..."
+      });
+      });
+    %script{ :src => "http://platform.twitter.com/anywhere.js?id=p0zKtbxfjRSmvX7dBIQg&amp;v=1" }
+    %script{ :type => "text/javascript" }
+      twttr.anywhere(function(twitter) {
+      twitter.hovercards();
+      });
+    %script{ :type => "text/javascript" }
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    %script{ :type => "text/javascript" }
+      try {
+      var pageTracker = _gat._getTracker("UA-15608127-1");
+      pageTracker._trackPageview();
+      } catch(err) {}
