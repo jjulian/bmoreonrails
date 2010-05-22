@@ -1,0 +1,138 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  }
+
+#pageContainer {
+  width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#leftSide {
+	background:#fff url(images/logo300.png) no-repeat center 40px;
+	padding-top:340px;
+  width: 300px;
+  float: left;
+  }
+
+#rightSide {
+  width: 500px;
+  float: right;
+	padding-top:50px;
+  }
+
+h1,h2,h3 {margin: 10px 0 5px 0;}
+
+p {
+  margin-bottom: 20px;
+  }
+h1.headline,h2.headline {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color:#a02529;
+  text-shadow: 3px 3px 1px #ddd;
+  }
+h2.headline {
+  color:#333;
+  text-shadow: none;
+}
+
+#footer {
+  clear: both;
+  font-weight: normal;
+  padding:40px 0 0 0;
+  }
+#footer hr {
+  border-top: 2px #333 solid;
+}
+#footer p {
+  padding:5px 0 15px 0;
+  width:840px;
+  text-align:center;
+  margin:10px auto 0 auto;
+}
+
+#upcoming_meetups h2 {
+  margin-top:10px;
+}
+
+#upcoming_meetups h3 {
+  background: #c1bd46;
+  padding: 2px 0px 2px 8px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#upcoming_meetups h3 a {
+  text-decoration: none;
+  display: block;
+}
+
+#upcoming_meetups h3 a:hover {
+  text-decoration: underline;
+}
+
+#upcoming_meetups p {
+  text-indent:0;
+  padding:5px 0 0 5px;
+  margin:0 0 5px 0;
+}
+#bmoreonrails_tweets ul.tweet_list li {
+  list-style-type:none;
+  padding-top:15px;
+  font-size:13px;
+  font-weight: normal;
+}
+
+ul.locations {
+  list-style-type:none;
+  margin:10px;
+}
+.banner {
+  text-align:center;
+  background:#c1bd46;
+  padding:1px 0;
+}
+.banner h1 {
+  font-size:1.5em;
+  font-weight:bold;
+  text-shadow: 3px 3px 1px #b1ad36;
+}
+.banner a {
+  color:#333;
+}
+/* */
+#call {
+  text-align:center;
+  background:#c1bd46;
+  padding:20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+.event .info {
+  width:80%;
+  float:left;
+}
+.event .logo {
+  float:right;
+  margin-top:20px;
+}
+.event {
+  position:relative;
+  clear:both;
+}
+
+
+/* interior page-specific */
+body.interior #pageContainer #homeLink {
+  float: left;
+  margin: 20px 25px auto 0px;
+}

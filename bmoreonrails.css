@@ -1,0 +1,19 @@
+body {
+  background-color:#FFFFFF;
+  color:#333333;
+  font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:bold;
+}
+p {
+  font-size:13px;
+  font-weight:normal;
+}
+td {
+  font-size:13px;
+  font-weight:normal;
+}
+a:link{ color:#a02529; }
+a:visited { color:#a02529; }
+a:hover { color:#a02529; }
+a:active { color:blue; }
+img { border:0; }
