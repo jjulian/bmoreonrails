@@ -29,7 +29,7 @@ task :generate do
 end
 
 task :symlink_stay_with_a_local do
-  run "ln -s #{stay_with_a_local_root} #{release_path}/stay-with-a-local"
+  run "ln -s #{stay_with_a_local_root} #{release_path}/public/stay-with-a-local"
 end
 
 after :deploy, :generate
