@@ -1,1 +1,5 @@
-B'More on Rails!
+This is the B'More on Rails website - bmoreonrails.org
+
+It's generated overnight on the server from cron. Use rake generate to generate the dynamic pieces into /public. 
+
+"master" is the branch for the generated site (May 22). "gh-pages" is the obsolete static branch.
