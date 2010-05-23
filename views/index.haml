@@ -79,9 +79,9 @@
         #upcoming_meetups
           - meetups.each do |meetup|
             %h3
-              %a{ :href => meetup.link }= meetup.title
-            %h4= meetup.when.strftime("%A, %B %d %Y at %I:%M%p")
-            %p= meetup.content
+              %a{ :href => meetup.event_url }= meetup.name
+            %h4= Time.parse(meetup.time).strftime("%A, %B %d %Y at %I:%M%p")
+            %p= meetup.description
       #footer
         %hr
         %p
