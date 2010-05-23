@@ -1,28 +1,18 @@
 require 'httparty'
-require 'simple-rss'
-require 'hpricot'
+require 'hashie'
+require 'json'
 
 class Meetup
-  attr_accessor :title, :link, :content, :when, :rsvp_count
-  
-  def initialize(rss_item)
-    @title = rss_item.title
-    @link = rss_item.link
-    doc = Hpricot(rss_item.description)
-    @when = Time.parse((doc/"h3").first.html)
-    @content = (doc/"p").first.html
-  end
+  include HTTParty
+  default_params :key => '2cf75979e35663a305614c217a12', :group_id => '347566'
   
   def self.upcoming_meetups
-    # todo use json, get more attributes
-    rss = SimpleRSS.parse HTTParty.get "http://api.meetup.com/events.rss/?group_id=347566&text_format=plain&order=time&key=2cf75979e35663a305614c217a12"
-    rss.items.map { |event| Meetup.new(event) }
+    JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results
   end
   
   # todo get this working - render a new page
   # def self.past_meetups
-  #   rss = SimpleRSS.parse HTTParty.get "http://api.meetup.com/events.rss/?group_id=347566&text_format=plain&order=time&key=2cf75979e35663a305614c217a12&status=past"
-  #   rss.items.map { |event| Meetup.new(event) }
+  #   JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=12&status=past").body, :object_class => Hashie::Mash).results
   # end
 
 end
