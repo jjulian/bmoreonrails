@@ -136,3 +136,8 @@ body.interior #pageContainer #homeLink {
   float: left;
   margin: 20px 25px auto 0px;
 }
+
+body.interior .simple_header {
+  line-height:130px;
+}
+.clear {clear:both;}

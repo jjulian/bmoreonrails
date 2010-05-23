@@ -10,10 +10,13 @@
     %link{ :href => "http://bmoreonrails.org/past_meetups.html", :rel => "canonical" }
     %link{ :href => "bmoreonrails.css", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css" }
-  %body
+  %body.interior
     #pageContainer
-      %h2 Past Events
-      #meetups
+      .simple_header
+        %a#homeLink{:href => "./"}
+          %img{:src => "images/ruby_100.png", :alt => "B'more on Rails"}
+        %h1.headline Past Events
+      #meetups.clear
         - meetups.each do |meetup|
           %h3
             %a{ :href => meetup.event_url }= meetup.name
