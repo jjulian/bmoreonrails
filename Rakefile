@@ -1,6 +1,7 @@
 require 'benchmark'
 require 'haml'
 require 'models/meetup'
+require 'models/member'
 
 def render_page(name, hash = {})
   template = File.read("views/#{name}.haml")
@@ -13,7 +14,7 @@ desc "Generate the site"
 task :generate do
   time = Benchmark.realtime {
     render_page('index', :meetups => Meetup.upcoming_meetups)
-    # render_page('members', :members => Member.recent_attendees)
+    # render_page('members', :members => Member.all)
   }
   puts "Generated site in #{time} seconds."
 end
