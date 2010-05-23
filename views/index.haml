@@ -77,7 +77,7 @@
           %a{ :href => "http://www.meetup.com/bmore-on-rails/calendar/rss/B%27more+on+Rails/" }
             %img{ :src => "images/feed.png", :alt => "B'more on Rails Upcoming Events Feed" }
         #upcoming_meetups
-          - upcoming_meetups.each do |meetup|
+          - meetups.each do |meetup|
             %h3
               %a{ :href => meetup.link }= meetup.title
             %h4= meetup.when.strftime("%A, %B %d %Y at %I:%M%p")
