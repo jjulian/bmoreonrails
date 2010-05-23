@@ -14,6 +14,7 @@ desc "Generate the site"
 task :generate do
   time = Benchmark.realtime {
     render_page('index', :meetups => Meetup.upcoming_meetups)
+    render_page('past_meetups', :meetups => Meetup.past_meetups)
     # render_page('members', :members => Member.all)
   }
   puts "Generated site in #{time} seconds."

@@ -58,11 +58,11 @@ h2.headline {
   margin:10px auto 0 auto;
 }
 
-#upcoming_meetups h2 {
+#meetups h2 {
   margin-top:10px;
 }
 
-#upcoming_meetups h3 {
+#meetups h3 {
   background: #c1bd46;
   padding: 2px 0px 2px 8px;
   -webkit-border-radius: 4px;
@@ -70,16 +70,16 @@ h2.headline {
   border-radius: 4px;
 }
 
-#upcoming_meetups h3 a {
+#meetups h3 a {
   text-decoration: none;
   display: block;
 }
 
-#upcoming_meetups h3 a:hover {
+#meetups h3 a:hover {
   text-decoration: underline;
 }
 
-#upcoming_meetups p {
+#meetups p {
   text-indent:0;
   padding:5px 0 0 5px;
   margin:0 0 5px 0;

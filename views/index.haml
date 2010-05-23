@@ -76,12 +76,15 @@
           Upcoming Events
           %a{ :href => "http://www.meetup.com/bmore-on-rails/calendar/rss/B%27more+on+Rails/" }
             %img{ :src => "images/feed.png", :alt => "B'more on Rails Upcoming Events Feed" }
-        #upcoming_meetups
+        #meetups
           - meetups.each do |meetup|
             %h3
               %a{ :href => meetup.event_url }= meetup.name
             %h4= Time.parse(meetup.time).strftime("%A, %B %d %Y at %I:%M%p")
             %p= meetup.description
+          %p
+            %a{:href => 'past_meetups.html'} Past Events
+            
       #footer
         %hr
         %p

@@ -10,9 +10,9 @@ class Meetup
     JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results
   end
   
-  # todo get this working - render a new page
-  # def self.past_meetups
-  #   JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=12&status=past").body, :object_class => Hashie::Mash).results
-  # end
+  def self.past_meetups
+    # this returns 25 max...wtf -12 works, -13 works, -18 returns less
+    JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&status=past&after=-12m&before=0d&order=time&desc=true").body, :object_class => Hashie::Mash).results
+  end
 
 end
