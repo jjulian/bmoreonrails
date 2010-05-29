@@ -80,7 +80,8 @@
           - meetups.each do |meetup|
             %h3
               %a{ :href => meetup.event_url }= meetup.name
-            %h4= Time.parse(meetup.time).strftime("%A, %B %d %Y at %I:%M%p")
+            - require 'date' # use stdlib to parse the date since it inckudes the TZ
+            %h4= DateTime.parse(meetup.time).strftime("%A, %B %d %Y at %I:%M%p")
             %p= meetup.description
           %p
             %a{:href => 'past_meetups.html'} Past Events
