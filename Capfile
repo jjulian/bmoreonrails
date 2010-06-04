@@ -13,6 +13,7 @@ set :deploy_to, "/var/www/bmoreonrails"
 
 # custom
 set :stay_with_a_local_root, "/var/www/stay-with-a-local/public"
+set :ride_with_a_local_root, "/var/www/ride-with-a-local/current/public"
 
 namespace :deploy do
    task :start do ; end
@@ -28,9 +29,10 @@ task :generate do
   run "cd #{current_release} && #{try_sudo} #{rake} generate"
 end
 
-task :symlink_stay_with_a_local do
-  run "ln -s #{stay_with_a_local_root} #{release_path}/public/stay-with-a-local"
+task :symlink_apps do
+  run "ln -s #{stay_with_a_local_root} #{current_release}/public/stay-with-a-local"
+  run "ln -s #{ride_with_a_local_root} #{current_release}/public/ride-with-a-local"
 end
 
 after :deploy, :generate
-after :deploy, :symlink_stay_with_a_local
+after :deploy, :symlink_apps
