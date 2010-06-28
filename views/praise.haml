@@ -10,17 +10,17 @@
     %link{ :href => "http://bmoreonrails.org", :rel => "canonical" }
     %link{ :href => "bmoreonrails.css", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css" }
-  %body
+  %body.interior
     #pageContainer
-      -# %a{ :id => "homeLink", :href => "/"}
-      -#   %img{ :src => "/images/ruby_100.png", :alt => "B'more on Rails" }
       %h1.headline RailsConf in Baltimore was a huge success!
       %h2 Here's what some folks had to say about Baltimore and Bmoreonrails:
       -tweets.each do |tweet|
-        %h3
-          %a{ :href => tweet[:url] }= tweet[:text]
-        %p
-          %a{ :href => "http://twitter.com/#{tweet[:user]}" }= tweet[:user]
+        .quote
+          %h3
+            %a{ :href => tweet[:url] }= tweet[:text]
+          %p
+            %a{ :href => "http://twitter.com/#{tweet[:user]}" } @#{tweet[:user]}
+      %h2 Thanks to everyone who made RailsConf 2010 the amazing conference that it was!
       #footer
         %hr
         %p

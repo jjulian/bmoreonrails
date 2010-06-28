@@ -129,6 +129,12 @@ ul.locations {
   position:relative;
   clear:both;
 }
+.quote {
+  padding:0 2em;
+}
+.quote p {
+  padding:0 2em;
+}
 
 
 /* interior page-specific */
