@@ -5,6 +5,7 @@ set :application, "bmoreonrails"
 set :scm, "git"
 set :repository, "git@github.com:jjulian/bmoreonrails.git"
 set :branch, "master"
+set :deploy_via, :remote_cache
 
 role :web, "67.207.150.229"
 set :user, "www-data"
