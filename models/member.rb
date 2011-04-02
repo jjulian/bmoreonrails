@@ -11,6 +11,6 @@ class Member
     # [0,1].inject([]) do |records,offset|
     #   records.concat JSON.parse(get("http://api.meetup.com/members.json/?offset=#{offset}").body, :object_class => Hashie::Mash).results
     # end
-    Hashie::Mash.new([{:name => 'Ed Schmalzle'}, {:name => 'George Anderson'}, {:name => 'Jack Waugh'}, {:name => 'Shawn Dellysse'}])
+    [Hashie::Mash.new(:name => 'Ed Schmalzle'), Hashie::Mash.new(:name => 'George Anderson'), Hashie::Mash.new(:name => 'Jack Waugh'), Hashie::Mash.new(:name => 'Shawn Dellysse')]
   end
 end

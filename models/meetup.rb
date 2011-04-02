@@ -13,15 +13,11 @@ class Meetup
     end
   end
   
-  def self.upcoming_meetups
-    JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results
-  end
-  
-  def self.upcoming_meetup_ids(test_response_string=nil)
+  def self.upcoming_meetups(test_response_string=nil)
     if test_response_string
-      JSON.parse(test_response_string)['results'].map{|meetup| meetup["id"]}
+      JSON.parse(test_response_string)['results']
     else
-      JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results.map(&:id)
+      JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results
     end
   end
   
