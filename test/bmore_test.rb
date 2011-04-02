@@ -14,6 +14,6 @@ class BmoreTest < Test::Unit::TestCase
   end
   
   def test_fetch_rsvps_by_event_id
-    assert_equal ['Ed Schmalzle', 'George Anderson', 'Jack Waugh', 'Shawn Dellysse'], Meetup.rsvps_by_event_id('16332252')
+    assert_equal [{:name => 'Ed Schmalzle'}, {:name => 'George Anderson'}, {:name => 'Jack Waugh'}, {:name => 'Shawn Dellysse'}], Meetup.rsvps_by_event_id('16332252')
   end
 end

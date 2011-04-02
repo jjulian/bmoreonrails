@@ -17,14 +17,14 @@ task :generate do
     render_page('past_meetups', :meetups => Meetup.past_meetups)
     render_page('railsconf')
     render_page('praise', :tweets => praise_tweets)
-    # render_page('members', :members => Member.all)
+    render_page('members', :members => Member.all)
   }
   puts "Generated site in #{time} seconds."
 end
 
 desc "Remove generated files"
 task :clean do
-  ['index','past_meetups','railsconf','praise'].each do |f|
+  ['index','past_meetups','railsconf','praise','members'].each do |f|
     FileUtils.rm "public/#{f}.html", :force => true
   end
   puts "Generated files removed."
