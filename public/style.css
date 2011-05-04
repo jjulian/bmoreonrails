@@ -147,3 +147,14 @@ body.interior .simple_header {
   line-height:130px;
 }
 .clear {clear:both;}
+
+.members-array {
+  width:480px;
+}
+.member a {
+  float:left;
+}
+.member img {
+  height:60px;
+  width:60px;
+}

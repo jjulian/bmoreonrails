@@ -17,7 +17,7 @@ task :generate do
     render_page('past_meetups', :meetups => Meetup.past_meetups)
     render_page('railsconf')
     render_page('praise', :tweets => praise_tweets)
-    render_page('members', :members => Member.all)
+    # render_page('members', :members => Member.active)
   }
   puts "Generated site in #{time} seconds."
 end

@@ -11,6 +11,7 @@
     %link{ :href => "http://bmoreonrails.org", :rel => "canonical" }
     %link{ :href => "bmoreonrails.css", :rel => "stylesheet", :type => "text/css" }
     %link{ :href => "style.css", :rel => "stylesheet", :type => "text/css" }
+    %link{ :href => "tipsy.css", :rel => "stylesheet", :type => "text/css" }
   %body
     .banner
       %h1
@@ -21,6 +22,14 @@
       #rightSide
         %h1.headline
           B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails application framework.
+        %h2
+          Who we are
+          .members-array
+            - Member.list.shuffle.each do |member|
+              .member
+                %a{:href => "http://twitter.com/#{member.twitter}", :title => "#{member.name} (@#{member.twitter})", :target => '_blank'}
+                  %img{:src => member.avatar_url, :alt => member.name}
+          %br.clear
         %h2.headline
           We meet weekly...
           %a{ :href => "http://www.meetup.com/bmore-on-rails/" }
@@ -97,6 +106,7 @@
             Charles Martucci / Craftwork
     %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
     %script{ :src => "javascripts/jquery.tweet.js" }
+    %script{ :src => "javascripts/jquery.tipsy.js" }
     %script
       $(document).ready(function() {
       $("#bmoreonrails_tweets").tweet({
@@ -116,6 +126,8 @@
       twttr.anywhere(function(twitter) {
       twitter.hovercards();
       });
+    %script
+      $('.member a').tipsy();
     %script{ :type => "text/javascript" }
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
