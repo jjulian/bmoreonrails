@@ -98,10 +98,10 @@ ul.locations {
 .banner {
   text-align:center;
   background:#c1bd46;
-  padding:1px 0;
+  padding:1px 0 10px;
 }
 .banner h1 {
-  font-size:1.5em;
+  font-size:1.8em;
   font-weight:bold;
   text-shadow: 3px 3px 1px #b1ad36;
 }
@@ -158,3 +158,52 @@ body.interior .simple_header {
   height:60px;
   width:60px;
 }
+
+.banner h2 {
+  font-size:1.3em;
+  font-weight:bold;
+  text-shadow: 3px 3px 1px #b1ad36;
+}
+.talks-by-locals {
+  margin:5px auto;
+  width:700px;
+}
+.talks-by-locals .talk {
+  width:320px;
+  margin:2px;
+  padding:5px;
+  float:left;
+}
+.talks-by-locals .talk img, .talks-by-locals .talk .info {
+  float:left;
+}
+.talks-by-locals .talk img {
+  width:53px;
+  height:53px;
+}
+.talks-by-locals .talk .info {
+  width:250px;
+  padding-left:0.4em;
+}
+.talks-by-locals a {
+  text-decoration:none;
+}
+.talks-by-locals a:hover {
+  text-decoration:underline;
+}
+.talks-by-locals .talk .info h3 {
+  margin:0;
+  padding:0;
+  font-size:17px;
+  text-align:left;
+}
+.talks-by-locals .talk .info p {
+  margin:0;
+  padding:0;
+  font-size:13px;
+  font-weight:normal;
+  text-align:left;
+}
+
+
+

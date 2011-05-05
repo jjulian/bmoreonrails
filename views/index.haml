@@ -14,10 +14,18 @@
     %link{ :href => "tipsy.css", :rel => "stylesheet", :type => "text/css" }
   %body
     .banner
-      %h1
-        RailsConf in Baltimore was June 7-10 2010!
-      %p
-        We hope you enjoyed our city! See the <a href="railsconf.html">events</a> and the <a href="praise.html">praise</a> from RailsConf week!
+      %h1 RailsConf 2011 is in Baltimore for the second year in a row!
+      %h2 See these B'more on Rails members speak:
+      .talks-by-locals
+        - Member.railsconf_2011_speakers.shuffle.each do |s|
+          .talk
+            %a{:href => s.presentation_url}
+              %img{:src => s.avatar_url, :alt => s.name}
+              .info
+                %h3= s.name
+                %p= s.presentation_name
+            %br.clear
+      %br.clear
     #pageContainer
       #rightSide
         %h1.headline
@@ -80,6 +88,7 @@
           %img{ :src => "images/mdlogix.gif", :alt => "Medical Decision Logic", :width => "40%" }
         %a{ :href => "http://www.smartlogicsolutions.com/" }
           %img{ :src => "images/smartlogic.png", :alt => "SmartLogic Solutions", :width => "40%" }
+
       #leftSide
         %h2
           Upcoming Events
@@ -96,9 +105,10 @@
             %a{:href => 'past_meetups.html'} Past Events
             
       #footer
+        %p RailsConf 2010 was in Baltimore June 7-10 2010. See the <a href="railsconf.html">events</a> and the <a href="praise.html">praise</a>.
         %hr
         %p
-          \&copy; 2010 B'more On Rails | Website hosted by
+          \&copy; 2011 B'more On Rails | Website hosted by
           %a{ :href => "http://www.smartlogicsolutions.com/" }
             SmartLogic Solutions
           | Logo by
