@@ -10,21 +10,23 @@ body {
 
 #pageContainer {
   width: 840px;
+  background:#fff url(images/logo300.png) no-repeat 0 20px;
   margin-left: auto;
   margin-right: auto;
   }
 
 #leftSide {
-	background:#fff url(images/logo300.png) no-repeat center 40px;
-	padding-top:340px;
   width: 300px;
   float: left;
   }
 
+#leftSide h2 {
+  padding-left: 4px;
+}
+
 #rightSide {
   width: 500px;
   float: right;
-	padding-top:50px;
   }
 
 h1,h2,h3 {margin: 10px 0 5px 0;}
@@ -32,15 +34,22 @@ h1,h2,h3 {margin: 10px 0 5px 0;}
 p {
   margin-bottom: 20px;
   }
+
 h1.headline,h2.headline {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color:#a02529;
   text-shadow: 3px 3px 1px #ddd;
-  }
+  padding-left: 340px;
+}
+
 h2.headline {
   color:#333;
   text-shadow: none;
+}
+
+h1.headline {
+  padding-top: 20px;
 }
 
 #footer {
@@ -48,9 +57,11 @@ h2.headline {
   font-weight: normal;
   padding:40px 0 0 0;
   }
+
 #footer hr {
   border-top: 2px #333 solid;
 }
+
 #footer p {
   padding:5px 0 15px 0;
   width:840px;
@@ -68,15 +79,21 @@ h2.headline {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  margin-left: -8px;
 }
 
 #meetups h3 a {
   text-decoration: none;
   display: block;
+  padding: 4px;
 }
 
 #meetups h3 a:hover {
   text-decoration: underline;
+}
+
+#meetups h4 {
+  padding-left: 4px;
 }
 
 #meetups p {
@@ -149,6 +166,7 @@ body.interior .simple_header {
 .clear {clear:both;}
 
 .members-array {
+  margin-top: 10px;
   width:480px;
 }
 .member a {
@@ -164,16 +182,23 @@ body.interior .simple_header {
   font-weight:bold;
   text-shadow: 3px 3px 1px #b1ad36;
 }
+
 .talks-by-locals {
   margin:5px auto;
-  width:700px;
+  width:840px;
 }
 .talks-by-locals .talk {
   width:320px;
-  margin:2px;
-  padding:5px;
   float:left;
 }
+
+.talks-by-locals .talk, .talks-by-locals h2, .talks-by-locals h1 {
+  margin: 2px;
+  margin-left: 0;
+  padding: 5px;
+  text-align: left;
+}
+
 .talks-by-locals .talk img, .talks-by-locals .talk .info {
   float:left;
 }
@@ -204,6 +229,5 @@ body.interior .simple_header {
   font-weight:normal;
   text-align:left;
 }
-
 
 
