@@ -14,9 +14,9 @@
     %link{ :href => "tipsy.css", :rel => "stylesheet", :type => "text/css" }
   %body
     .banner
-      %h1 RailsConf 2011 is in Baltimore for the second year in a row!
-      %h2 See these B'more on Rails members speak:
       .talks-by-locals
+        %h1 RailsConf 2011 is in Baltimore for the second year in a row!
+        %h2 See these B'more on Rails members speak:
         - Member.railsconf_2011_speakers.shuffle.each do |s|
           .talk
             %a{:href => s.presentation_url}
