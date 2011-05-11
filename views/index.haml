@@ -14,9 +14,9 @@
     %link{ :href => "tipsy.css", :rel => "stylesheet", :type => "text/css" }
   %body
     .banner
-      %h1 RailsConf 2011 is in Baltimore for the second year in a row!
-      %h2 See these B'more on Rails members speak:
       .talks-by-locals
+        %h1 RailsConf 2011 is in Baltimore for the second year in a row!
+        %h2 See these B'more on Rails members speak:
         - Member.railsconf_2011_speakers.shuffle.each do |s|
           .talk
             %a{:href => s.presentation_url}
@@ -27,9 +27,14 @@
             %br.clear
       %br.clear
     #pageContainer
+      %h1.headline
+        B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails application framework.
+      %h2.headline
+        We meet weekly...
+        %a{ :href => "http://www.meetup.com/bmore-on-rails/" }
+          join us
+        \!
       #rightSide
-        %h1.headline
-          B'more on Rails is a community of Baltimore folks who use the Ruby programming language and the Ruby on Rails application framework.
         %h2
           Who we are
           .members-array
@@ -38,11 +43,6 @@
                 %a{:href => "http://twitter.com/#{member.twitter}", :title => "#{member.name} (@#{member.twitter})", :target => '_blank'}
                   %img{:src => member.avatar_url, :alt => member.name}
           %br.clear
-        %h2.headline
-          We meet weekly...
-          %a{ :href => "http://www.meetup.com/bmore-on-rails/" }
-            join us
-          \!
         %h2
           Where to find us
         %ul.locations
