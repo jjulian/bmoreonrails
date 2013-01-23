@@ -10,18 +10,21 @@ def render_page(name, hash = {})
   File.open("public/#{name}.html", 'w') {|f| f.write(output) }
 end
 
+pages = ['index','past_meetups']
+
 desc "Generate the html files from the /view templates into /public"
 task :generate do
   time = Benchmark.realtime {
-    render_page('index', :meetups => Meetup.upcoming_meetups)
-    render_page('past_meetups', :meetups => Meetup.past_meetups)
+    pages.each do |page|
+      render_page(page, :meetups => Meetup.upcoming_meetups)
+    end
   }
   puts "Generated site in #{time} seconds."
 end
 
 desc "Remove generated files"
 task :clean do
-  ['index','past_meetups'].each do |f|
+  pages.each do |f|
     FileUtils.rm "public/#{f}.html", :force => true
   end
   puts "Generated files removed."
