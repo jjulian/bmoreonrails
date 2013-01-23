@@ -20,7 +20,7 @@
         - Meetup.past_meetups.each do |meetup|
           %h3
             %a{ :href => meetup.event_url }= meetup.name
-          %h4= Time.at(meetup.time / 1000).strftime("%A, %B %-d %Y at %-I:%M%p")
+          %h4= Time.at((meetup.time - meetup.utc_offset) / 1000).strftime("%A, %B %-d %Y at %-I:%M%p")
           %p= meetup.description
         %p
           See older events at
