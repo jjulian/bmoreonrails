@@ -87,11 +87,10 @@
           %a{ :href => "http://www.meetup.com/bmore-on-rails/calendar/rss/B%27more+on+Rails/" }
             %img{ :src => "images/feed.png", :alt => "B'more on Rails Upcoming Events Feed" }
         #meetups
-          - meetups.each do |meetup|
+          - Meetup.upcoming_meetups.each do |meetup|
             %h3
               %a{ :href => meetup.event_url }= meetup.name
-            - require 'date' # use stdlib to parse the date since it inckudes the TZ
-            %h4= DateTime.parse(meetup.time).strftime("%A, %B %d %Y at %I:%M%p")
+            %h4= Time.at(meetup.time / 1000).strftime("%A, %B %-d %Y at %-I:%M%p")
             %p= meetup.description
           %p
             %a{:href => 'past_meetups.html'} Past Events

@@ -2,21 +2,16 @@ require 'httparty'
 require 'hashie'
 require 'json'
 
+# See http://www.meetup.com/meetup_api/docs/2/events/
 class Meetup
   include HTTParty
   default_params :key => '2cf75979e35663a305614c217a12', :group_id => '347566'
-  
-  def self.upcoming_meetups(test_response_string=nil)
-    if test_response_string
-      JSON.parse(test_response_string)['results']
-    else
-      JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&page=3").body, :object_class => Hashie::Mash).results
-    end
-  end
-  
-  def self.past_meetups
-    # this returns 25 max...wtf -12 works, -13 works, -18 returns less
-    JSON.parse(get("http://api.meetup.com/events.json/?text_format=plain&order=time&status=past&after=-12m&before=0d&order=time&desc=true").body, :object_class => Hashie::Mash).results
+
+  def self.upcoming_meetups
+    JSON.parse(get("http://api.meetup.com/2/events?text_format=plain&status=upcoming&order=time&desc=false&offset=0&format=json&page=3").body, :object_class => Hashie::Mash).results
   end
 
+  def self.past_meetups
+    JSON.parse(get("http://api.meetup.com/2/events?text_format=plain&status=past&order=time&desc=true&offset=0&format=json&page=100").body, :object_class => Hashie::Mash).results
+  end
 end

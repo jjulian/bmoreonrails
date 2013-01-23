@@ -16,7 +16,7 @@ desc "Generate the html files from the /view templates into /public"
 task :generate do
   time = Benchmark.realtime {
     pages.each do |page|
-      render_page(page, :meetups => Meetup.upcoming_meetups)
+      render_page(page)
     end
   }
   puts "Generated site in #{time} seconds."
