@@ -34,16 +34,4 @@ class Member
       ['Chris Cahoon','ccahoon','cahooon','http://gravatar.com/avatar/0cbd59255fc17f956fa9346898f86adb?s=60']
     ].map { |a| Hashie::Mash.new(:name => a[0], :github_name => a[1], :twitter => a[2], :avatar_url => a[3]) }
   end
-  
-  def self.railsconf_2011_speakers
-    [
-      ['Jonathan Julian','http://gravatar.com/avatar/519e2fdbde9ac0662f8c82438e3b4d6c?s=53','Enough Design to be Dangerous','http://en.oreilly.com/rails2011/public/schedule/detail/19522'],
-      ['Avdi Grimm','http://gravatar.com/avatar/1968aedf598d1a7760db5ab306b5f153?s=53','Confident Code','http://en.oreilly.com/rails2011/public/schedule/detail/18418'],
-      ['Bryan Liles','http://gravatar.com/avatar/ba4b0b302231bffb0f685bbef25db0d6?s=53','ActiveSupport 3: What We Should Know About What We Don\'t Know','http://en.oreilly.com/rails2011/public/schedule/detail/19431'],
-      ['Greg Gershman','http://1.gravatar.com/avatar/b8e642733bfbb0417b3076ffebe5a080?s=36&d=identicon&r=R','Enhancing the Search Box','http://en.oreilly.com/rails2011/public/schedule/detail/19447'],
-      ['Nick Gauthier','http://gravatar.com/avatar/7855932fef545822ef0f5e049e6e2d46?s=53','KnowSQL: Database Tricks to Make Your Life Easier','http://en.oreilly.com/rails2011/public/schedule/detail/18476'],
-      ['David Troy','http://www.gravatar.com/avatar/ab03191a5efe5343a0517bf5e4fbdaf2.png?s=53','Stateful, Scalable Servers With EventMachine and Rails','http://en.oreilly.com/rails2011/public/schedule/detail/19674'],
-      ['Mike Subelsky','http://gravatar.com/avatar/f7d969d7a72376fab89cba3554c18ec1?s=53','Building Web Apps With HTML5','http://en.oreilly.com/rails2011/public/schedule/detail/18321']
-    ].map { |a| Hashie::Mash.new(:name => a[0], :avatar_url => a[1], :presentation_name => a[2], :presentation_url => a[3]) }
-  end
 end
