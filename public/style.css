@@ -10,10 +10,12 @@ body {
 
 #pageContainer {
   width: 840px;
-  background:#fff url(images/logo300.png) no-repeat 0 20px;
   margin-left: auto;
   margin-right: auto;
   }
+#pageContainer.withLogo {
+  background:#fff url(images/logo300.png) no-repeat 0 20px;
+}
 
 #leftSide {
   width: 300px;
