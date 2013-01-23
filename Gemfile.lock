@@ -6,6 +6,8 @@ GEM
     hashie (1.0.0)
     httparty (0.7.7)
       crack (= 0.1.8)
+    json (1.5.1)
+    rake (10.0.3)
 
 PLATFORMS
   ruby
@@ -14,3 +16,5 @@ DEPENDENCIES
   haml
   hashie
   httparty
+  json
+  rake
