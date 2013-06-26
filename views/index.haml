@@ -73,7 +73,14 @@
             larger
         %h2
           Recent @bmoreonrails Tweets
-        #bmoreonrails_tweets
+        %a.twitter-timeline{ :href => "https://twitter.com/bmoreonrails", :'data-widget-id' => "349675298540900352" }Tweets by @bmoreonrails
+        %script
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+          if(!d.getElementById(id)){js=d.createElement(s);
+          js.id=id;
+          js.src=p+"://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js,fjs);
+          }}(document,"script","twitter-wjs");
         %h2
           Sponsors
         %a{ :href => "http://www.mdlogix.com/" }
@@ -96,7 +103,7 @@
             %p= meetup.description
           %p
             %a{:href => 'past_meetups.html'} Past Events
-            
+
       #footer
         %hr
         %p
@@ -107,29 +114,11 @@
           %a{ :href => "http://www.craftwork.net" }
             Charles Martucci / Craftwork
     %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
-    %script{ :src => "javascripts/jquery.tweet.js" }
     %script{ :src => "javascripts/jquery.tipsy.js" }
-    %script
-      $(document).ready(function() {
-      $("#bmoreonrails_tweets").tweet({
-      username: "bmoreonrails",
-      join_text: "auto",
-      count: 5,
-      auto_join_text_default: "we said,",
-      auto_join_text_ed: "we",
-      auto_join_text_ing: "we were",
-      auto_join_text_reply: "we replied to",
-      auto_join_text_url: "we were checking out",
-      loading_text: "loading tweets..."
-      });
-      });
-    %script{ :src => "http://platform.twitter.com/anywhere.js?id=p0zKtbxfjRSmvX7dBIQg&amp;v=1" }
-    %script{ :type => "text/javascript" }
-      twttr.anywhere(function(twitter) {
-      twitter.hovercards();
-      });
+
     %script
       $('.member a').tipsy();
+
     %script{ :type => "text/javascript" }
       var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
       document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
