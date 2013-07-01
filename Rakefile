@@ -1,7 +1,7 @@
 require 'benchmark'
 require 'haml'
-require './models/meetup'
-require './models/member'
+require 'models/meetup'
+require 'models/member'
 
 def render_page(name, hash = {})
   template = File.read("views/#{name}.haml")
